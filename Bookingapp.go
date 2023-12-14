@@ -13,9 +13,11 @@ func main(){
 
    var remainingTickets uint = 50
 
+   var bookings []string 
+
    var firstName string
    var lastName string 
-   var email string
+   var email string 
    var userTickets uint
 
    fmt.Printf("%s\n", name)
@@ -23,8 +25,6 @@ func main(){
    "We have total of %v tickets and %v are still available.\n" +
    "Get your tickets here to attend\n", conferenceName, conferenceTickets, remainingTickets)
    
-
-
    fmt.Println( "please insert your name\n")
    fmt.Scanln(&firstName)
 
@@ -37,10 +37,19 @@ func main(){
    fmt.Println( "please insert your userTicket\n")
    fmt.Scanln(&userTickets)
 
-   fmt.Printf( "Thank you %v %v for booking %v tickets. you will receive a mail in %v\n", firstName, lastName, userTickets, email )
    
-
    remainingTickets = remainingTickets - userTickets
+
+//    bookings [0] = firstName + " " + lastName
+   bookings = append(bookings, firstName + " " + lastName)
+
+
+   fmt.Printf("the whole array: %v \n", bookings)
+   fmt.Printf("the first  value: %v \n", bookings[0])
+   fmt.Printf("the array array: %T \n", bookings)
+
+   fmt.Printf( "Thank you %v %v for booking %v tickets. you will receive a mail in %v\n", firstName, lastName, userTickets, email )
+
    fmt.Printf( "we now have %v remaining for %v", remainingTickets, name )
 }
 
