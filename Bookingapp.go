@@ -55,7 +55,7 @@ func main(){
 	bookings = append(bookings, firstName + " " + lastName)
  
  
-	fmt.Printf("the whole array: %v \n", bookings)
+	fmt.Printf("the whortle array: %v \n", bookings)
 	fmt.Printf("the first  value: %v \n", bookings[0])
 	fmt.Printf("the array array: %T \n", bookings)
  
